@@ -11,7 +11,7 @@
 import { useTestStore } from '@/store'
 
 const testStore = useTestStore()
-console.log(import.meta.env.VITE_BASE_URL)
+console.log(import.meta.env)
 </script>
 
 <style lang="scss">

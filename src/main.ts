@@ -7,7 +7,10 @@ export function createApp() {
 
   app.use(pinia)
 
-  return {
-    app
-  }
+  return { app }
+}
+
+// 生产环境禁用console.log
+if (import.meta.env.PROD) {
+  console.log = () => {}
 }
