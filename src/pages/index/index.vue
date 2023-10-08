@@ -14,8 +14,4 @@ const testStore = useTestStore()
 console.log(import.meta.env)
 </script>
 
-<style lang="scss">
-view {
-  color: red;
-}
-</style>
+<style lang="scss"></style>
