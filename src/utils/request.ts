@@ -1,3 +1,4 @@
+// request和uploadFile请求拦截器
 const requestInterceptor = {
   invoke(options: UniApp.RequestOptions) {
     if (!options.url.startsWith('http')) {
