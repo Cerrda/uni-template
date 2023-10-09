@@ -1,17 +1,29 @@
 <template>
   <view class="content">
     <view>测试：{{ testStore.testText }}</view>
-    <!-- {{ testText }} -->
     <button @tap="testStore.setTestText('change test text')" size="mini" plain type="primary">保存用户信息</button>
-    <button @tap="testStore.clearTestText()" v-for="i in 10" :key="i">清空测试数据</button>
+    <button @tap="testStore.clearTestText()">清空测试数据</button>
+
+    <view>个人信息:{{ JSON.stringify(perInfo) }}</view>
   </view>
 </template>
 
-<script setup lang="ts">
-import { useTestStore } from '@/store'
+<script lang="ts" setup>
+import { useTestStore } from '@/store/modules/test'
+import type { PersonalInformation } from './index.d.ts'
+import { ref } from 'vue'
 
+// pinia
 const testStore = useTestStore()
-console.log(import.meta.env)
+
+// type
+const perInfo = ref<PersonalInformation>()
+perInfo.value = {
+  name: '张三',
+  age: 18
+}
+
+// request
 </script>
 
-<style lang="scss"></style>
+<style lang="scss" scoped></style>
