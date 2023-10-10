@@ -6,14 +6,14 @@ export type PersonalInformation = {
   age: number
 }
 
-/** 首页-广告区域数据类型 */
-export type BannerItem = {
-  /** 跳转链接 */
-  hrefUrl: string
+/** Todo */
+export type Todo = {
+  /** 用户Id */
+  userId: number
   /** id */
-  id: string
-  /** 图片链接 */
-  imgUrl: string
-  /** 跳转类型 */
-  type: number
+  id: number
+  /** todo内容 */
+  title: string
+  /** 是否完成 */
+  completed: boolean
 }

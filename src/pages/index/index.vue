@@ -6,15 +6,15 @@
 
     <view>个人信息:{{ JSON.stringify(perInfo) }}</view>
 
-    <view>轮播图:{{ JSON.stringify(bannerList) }}</view>
+    <view>轮播图:{{ JSON.stringify(todosList) }}</view>
   </view>
 </template>
 
 <script lang="ts" setup>
 import { useTestStore } from '@/store/modules/test'
-import type { BannerItem, PersonalInformation } from './index.d.ts'
+import type { Todo, PersonalInformation } from './index.d.ts'
 import { ref } from 'vue'
-import { getHomeBannerAPI } from './IndexService'
+import { getTodosAPI } from './IndexService'
 import { onLoad } from '@dcloudio/uni-app'
 
 // pinia
@@ -28,10 +28,10 @@ perInfo.value = {
 }
 
 // request
-const bannerList = ref<BannerItem[]>([])
+const todosList = ref<Todo[]>([])
 const getHomeBannerData = async () => {
-  const res = await getHomeBannerAPI()
-  bannerList.value = res.result
+  const res = await getTodosAPI()
+  todosList.value = res
 }
 onLoad(() => {
   getHomeBannerData()

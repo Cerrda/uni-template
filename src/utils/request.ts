@@ -12,11 +12,12 @@ uni.addInterceptor('request', requestInterceptor)
 uni.addInterceptor('uploadFile', requestInterceptor)
 
 // 后端返回的数据类型定义
-type Data<T> = {
-  code: string
-  msg: string
-  result: T
-}
+// type Data<T> = {
+//   code: string
+//   msg: string
+//   result: T
+// }
+type Data<T> = T
 
 export const http = <T>(options: UniApp.RequestOptions) => {
   return new Promise<Data<T>>((resolve, reject) => {
@@ -24,14 +25,15 @@ export const http = <T>(options: UniApp.RequestOptions) => {
       ...options,
       success(res) {
         if (res.statusCode >= 200 && res.statusCode < 300) {
+          console.log(res)
           resolve(res.data as Data<T>)
         } else if (res.statusCode === 401) {
           uni.navigateTo({ url: '/pages/login/login' })
           reject(res)
         } else {
           uni.showToast({
-            icon: 'none',
-            title: (res.data as Data<T>).msg || '请求错误'
+            icon: 'none'
+            // title: (res.data as Data<T>).msg || '请求错误'
           })
           reject(res)
         }
