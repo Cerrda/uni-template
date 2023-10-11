@@ -3,6 +3,7 @@
     <view>测试：{{ testStore.testText }}</view>
     <button @tap="testStore.setTestText('change test text')" size="mini" plain type="primary">保存用户信息</button>
     <button @tap="testStore.clearTestText()">清空测试数据</button>
+    <view text="red 32" font="600" w100 h200 border="1 blue solid">test</view>
 
     <view>个人信息:{{ JSON.stringify(perInfo) }}</view>
 
@@ -33,6 +34,7 @@ const getHomeBannerData = async () => {
   const res = await getTodosAPI()
   todosList.value = res
 }
+
 onLoad(() => {
   getHomeBannerData()
 })

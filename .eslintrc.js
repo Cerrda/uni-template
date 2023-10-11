@@ -10,17 +10,17 @@ module.exports = {
     'plugin:prettier/recommended'
   ],
   globals: {
-    uni: true,
-    wx: true,
-    WechatMiniprogram: true,
-    getCurrentPages: true,
-    getApp: true,
-    UniApp: true,
-    UniHelper: true,
-    App: true,
-    Page: true,
-    Component: true,
-    AnyObject: true
+    uni: 'readonly',
+    wx: 'readonly',
+    WechatMiniprogram: 'readonly',
+    getCurrentPages: 'readonly',
+    getApp: 'readonly',
+    UniApp: 'readonly',
+    UniHelper: 'readonly',
+    App: 'readonly',
+    Page: 'readonly',
+    Component: 'readonly',
+    AnyObject: 'readonly'
   },
   overrides: [
     {
