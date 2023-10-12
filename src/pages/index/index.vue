@@ -28,6 +28,7 @@ perInfo.value = {
   name: '张三',
   age: 18
 }
+console.log(perInfo.value)
 
 // request
 const todosList = ref<Todo[]>([])
