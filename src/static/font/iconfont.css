@@ -1,0 +1,23 @@
+@font-face {
+  font-family: "iconfont"; /* Project id 4282482 */
+  src: url('iconfont.woff2?t=1697016675564') format('woff2'),
+       url('iconfont.woff?t=1697016675564') format('woff'),
+       url('iconfont.ttf?t=1697016675564') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-duoyun:before {
+  content: "\e631";
+}
+
+.icon-cengji:before {
+  content: "\e6e1";
+}
+

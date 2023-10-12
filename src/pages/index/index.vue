@@ -1,5 +1,7 @@
 <template>
   <view class="content">
+    <text class="iconfont icon-cengji"></text>
+
     <view>测试：{{ testStore.testText }}</view>
     <button @tap="testStore.setTestText('change test text')" size="mini" plain type="primary">保存用户信息</button>
     <button @tap="testStore.clearTestText()">清空测试数据</button>
