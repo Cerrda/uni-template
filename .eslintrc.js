@@ -40,8 +40,8 @@ module.exports = {
   },
   plugins: ['@typescript-eslint', 'vue'],
   rules: {
-    'vue/multi-word-component-names': 'off',
-    '@typescript-eslint/no-unused-vars': 'off',
-    'no-var': 'error'
+    'vue/multi-word-component-names': 'off', // 关闭多个单词组成的组件名检测
+    '@typescript-eslint/no-unused-vars': 'off', // 关闭未使用变量检测
+    'no-var': 'error' // 禁止使用var
   }
 }
