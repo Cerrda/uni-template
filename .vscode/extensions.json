@@ -8,6 +8,7 @@
     "editorconfig.editorconfig", // editorconfig
     "mrmaoddxxaa.create-uniapp-view", // 创建 uni-app 页面
     "uni-helper.uni-helper-vscode", // uni-app 代码提示
-    "evils.uniapp-vscode" // uni-app 文档
+    "evils.uniapp-vscode", // uni-app 文档
+    "antfu.unocss" // unocss样式提示
   ]
 }
