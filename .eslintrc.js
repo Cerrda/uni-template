@@ -10,17 +10,17 @@ module.exports = {
     'plugin:prettier/recommended'
   ],
   globals: {
-    uni: true,
-    wx: true,
-    WechatMiniprogram: true,
-    getCurrentPages: true,
-    getApp: true,
-    UniApp: true,
-    UniHelper: true,
-    App: true,
-    Page: true,
-    Component: true,
-    AnyObject: true
+    uni: 'readonly',
+    wx: 'readonly',
+    WechatMiniprogram: 'readonly',
+    getCurrentPages: 'readonly',
+    getApp: 'readonly',
+    UniApp: 'readonly',
+    UniHelper: 'readonly',
+    App: 'readonly',
+    Page: 'readonly',
+    Component: 'readonly',
+    AnyObject: 'readonly'
   },
   overrides: [
     {
@@ -40,8 +40,8 @@ module.exports = {
   },
   plugins: ['@typescript-eslint', 'vue'],
   rules: {
-    'vue/multi-word-component-names': 'off',
-    '@typescript-eslint/no-unused-vars': 'off',
-    'no-var': 'error'
+    'vue/multi-word-component-names': 'off', // 关闭多个单词组成的组件名检测
+    '@typescript-eslint/no-unused-vars': 'off', // 关闭未使用变量检测
+    'no-var': 'error' // 禁止使用var
   }
 }
