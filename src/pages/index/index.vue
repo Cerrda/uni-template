@@ -1,7 +1,7 @@
 <template>
   <view class="content">
     <view>测试：{{ testStore.testText }}</view>
-    <Iconify icon="i-mdi-alarm" size="50"></Iconify>
+    <Iconify icon="i-mdi-alarm"></Iconify>
     <button @tap="testStore.setTestText('change test text')" size="mini" plain type="primary">保存用户信息</button>
     <button @tap="testStore.clearTestText()">清空测试数据</button>
     <view text="red 32" font="600" w100 h200 border="1 blue solid">test</view>
