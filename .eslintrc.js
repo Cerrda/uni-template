@@ -42,6 +42,9 @@ module.exports = {
   rules: {
     'vue/multi-word-component-names': 'off', // 关闭多个单词组成的组件名检测
     '@typescript-eslint/no-unused-vars': 'off', // 关闭未使用变量检测
-    'no-var': 'error' // 禁止使用var
+    'no-var': 'error', // 禁止使用var
+    '@typescript-eslint/no-explicit-any': 'off', //允许使用any
+    '@typescript-eslint/ban-types': 'off', // 不允许某些类型
+    '@typescript-eslint/ban-ts-comment': 'off' // 允许ts注释
   }
 }

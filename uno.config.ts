@@ -17,11 +17,11 @@ export default defineConfig({
       whRpx: true, // 使用 rpx 为默认单位
       prefix
     }),
-    presetWeappAttributify() //vscode插件 autocomplete 提示
-    // presetIcons({
-    //   scale: 1.2,
-    //   warn: true
-    // })
+    presetWeappAttributify(), //vscode插件 autocomplete 提示
+    presetIcons({
+      scale: 1.2,
+      warn: true
+    })
   ],
   shortcuts: [
     {
